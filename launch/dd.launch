@@ -1,0 +1,6 @@
+<launch>
+  <node name="filtre_imu" pkg="boucle_commande" type="Filtre_IMU_simplifie" output="screen"></node> 
+  <node name="direct_drive" pkg="direct_drive" type="node" output="screen"></node>
+  <include file="$(find gimbal_driver)/launch/gimbal_driver.launch"/>
+  <include file="$(find phidgets_imu)/launch/imu.launch"/>
+</launch>
